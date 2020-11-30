@@ -1,10 +1,8 @@
 import random
-pip install playsound
 n = random.randint(1,8)
 
 if n == 1:
     print("Vertraging")
-    playsound('hoi.wav')
 elif n == 2:
     print("horizontale verplaatsing")
 elif n == 3:
