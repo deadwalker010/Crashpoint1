@@ -1,23 +1,19 @@
 import random
-n = random.randint(1,10)
+n = random.randint(1,8)
 
 if n == 1:
-    print(n)
+    print("Vertraging")
 elif n == 2:
-    print(n)
+    print("horizontale verplaatsing")
 elif n == 3:
-    print(n)
+    print("Storing")
 elif n == 4:
-    print(n)
+    print("Insurance")
 elif n == 5:
-    print(n)
+    print("Family insurance")
 elif n == 6:
-    print(n)
+    print("Multiplier iedereen")
 elif n == 7:
-    print(n)
+    print("Multiplier")
 elif n == 8:
-    print(n)
-elif n == 9:
-    print(n)
-elif n == 10:
-    print(n)
+    print("Counter")
