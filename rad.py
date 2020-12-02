@@ -17,4 +17,3 @@ elif n == 7:
     print("Multiplier")
 elif n == 8:
     print("Counter")
-    print(n)
