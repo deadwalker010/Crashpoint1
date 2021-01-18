@@ -19,22 +19,21 @@ degree_points = [0, 360]  # this will be used to position the lines along the ou
 velocity = [0, 0]  # this will be used to determine how fast the circle turns
 
 def setup():
-    #Load a soundfile from the /data folder of the sketch and play it back
+    global sound
  
-    
     size(totalWidth, totalHeight)
     ellipseMode(RADIUS) # the ellipses get made through their radiuses and not x and y
     frameRate(240) # slower frame rate
     sound = SoundFile(this,"ok.mp3")
     
-    global sound
+    
 def draw():
     global number
     global circleDist
     global velocity
     global degree_points
     
-    background(255, 255, 255)
+    background(190, 255, 255)
     strokeWeight(1)
     
     circleDist = dist(mouseX, mouseY, circleX, circleY)  # the distance of the middle to the mouse, this will be used later with the inner circle
@@ -77,12 +76,12 @@ def draw():
         textY = circleY + ((middle_y - circleY) / 2)
         pushMatrix()  # opens a change for the matrix (recentering the matrix for the rotation)
         translate(textX, textY)  # sets the new center for rotation
-        fill(255, 0, 0)
+        fill(30, 25, 175)
         rotate((angle + 20) * math.pi / 180)
         text(all_chances[index], 0, 0)
         popMatrix()  # closes the change for the matrix
 
-        fill(255, 0, 0)
+        fill(0, 255, 0)
     else:
         fill(0)
     
@@ -94,10 +93,11 @@ def draw():
     # text inside the inner circle
     
     textSize(35)
-    fill(255, 255, 255)
+    fill(30, 25, 175)
     textAlign(CENTER, CENTER)
     if turningWheel:
         text('STOP', circleX, circleY)
+        
     else:
         text('START', circleX, circleY)
     
